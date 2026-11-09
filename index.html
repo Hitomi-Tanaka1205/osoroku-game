@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>怖録（おそろく）｜公式サイト</title>
+<meta name="description" content="『怖録』（おそろく）公式サイト。心霊系動画投稿者となって廃校を探索する、一人称視点の3Dホラーゲーム。恐怖を撮れ。動画をバズらせろ。">
+<link rel="canonical" href="https://osoroku-game.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="怖録（おそろく）公式サイト">
+<meta property="og:title" content="怖録（おそろく）｜公式サイト">
+<meta property="og:description" content="『怖録』（おそろく）公式サイト。心霊系動画投稿者となって廃校を探索する、一人称視点の3Dホラーゲーム。恐怖を撮れ。動画をバズらせろ。">
+<meta property="og:url" content="https://osoroku-game.com/">
+<meta property="og:image" content="https://osoroku-game.com/assets/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@project_os6">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&amp;family=Special+Elite&amp;family=DotGothic16&amp;display=swap">
+<style>
+[hidden]{display:none!important}
+
+body{margin:0;background:#0a0b0c}
+a{color:#e8e4dc}a:hover{color:#ffffff}
+.grunge{background:#0a0b0c url(assets/grunge_bg.jpg) left top/1600px auto repeat}
+.bgghost{background:url(assets/wata_bg5.png) right 12% top -220px/min(860px, 72vw) auto no-repeat;mix-blend-mode:normal}
+.brush{clip-path:polygon(0 22%,5% 4%,32% 10%,58% 0,100% 12%,96% 55%,100% 90%,68% 100%,36% 92%,4% 100%,1% 58%)}
+@keyframes osoJit{0%,100%{transform:translate(0,0)}20%{transform:translate(0.6px,-0.4px)}40%{transform:translate(-0.5px,0.5px)}60%{transform:translate(0.4px,0.6px)}80%{transform:translate(-0.6px,-0.3px)}}
+@keyframes osoDrift{0%,100%{transform:translate(0,0) skewX(0deg)}50%{transform:translate(1px,0) skewX(-0.6deg)}}
+@keyframes osoBlink{0%,49%{opacity:1}50%,100%{opacity:0.15}}
+@keyframes osoFlicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:0.55}94%{opacity:1}97%{opacity:0.75}98%{opacity:1}}
+.jit{display:inline-block;animation:osoJit 0.9s steps(5) infinite}
+.jit.d1{animation-delay:-0.2s}.jit.d2{animation-delay:-0.45s}.jit.d3{animation-delay:-0.7s}
+.drift{display:inline-block;animation:osoDrift 4s ease-in-out infinite}
+.blink{animation:osoBlink 1.2s steps(1) infinite}
+.flicker{animation:osoFlicker 5s linear infinite}
+.btnx{position:relative;display:inline-flex;padding:5px;border:1px solid rgba(232,228,220,0.55);text-decoration:none}
+.btnx>span{position:relative;display:flex;align-items:center;justify-content:center;min-width:320px;min-height:60px;padding:0 64px;box-sizing:border-box;background-color:#ecebe6;background-image:radial-gradient(circle,rgba(0,0,0,0.13) 0.8px,transparent 1.4px),radial-gradient(circle,rgba(0,0,0,0.08) 1.2px,transparent 2px),radial-gradient(circle,rgba(0,0,0,0.05) 3px,transparent 5px);background-size:7px 9px,23px 17px,61px 47px;background-position:0 0,5px 3px,11px 19px;color:#111111;font-weight:800;font-size:19px;letter-spacing:0.12em;clip-path:polygon(0 8%,2% 0,6% 6%,11% 1%,19% 4%,27% 0,36% 5%,44% 1%,53% 3%,61% 0,70% 6%,78% 1%,86% 4%,93% 0,98% 5%,100% 2%,99% 22%,100% 41%,98% 58%,100% 76%,99% 95%,96% 100%,89% 96%,81% 100%,73% 95%,64% 100%,55% 96%,47% 100%,38% 95%,30% 100%,21% 96%,13% 100%,6% 95%,1% 100%,0 82%,2% 63%,0 45%,1% 27%)}
+.btnx .arr{position:absolute;right:26px;font-weight:400}
+.btnx:hover>span{background-color:#ffffff}
+.sidenav{position:absolute;top:28px;right:0;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.sidenav a.nl{font-family:'Special Elite','Courier New',monospace;font-size:19px;color:#e8e4dc;text-decoration:none;padding:6px 32px 6px 16px;text-shadow:0 0 6px #000000;display:flex;align-items:center;gap:10px}
+.sidenav a.nl:hover{color:#ff4a3d}
+.sidenav a.nl::before{content:"";width:7px;height:7px;border-radius:50%;background:transparent}
+.sidenav a.nl:hover::before{background:#ff4a3d}
+.sidetab{margin-top:28px;display:inline-flex;align-items:center;min-height:52px;padding:0 28px 0 22px;background:#ecebe6;color:#111111;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:0.08em;clip-path:polygon(0 6%,4% 0,18% 5%,35% 0,52% 4%,70% 0,86% 5%,100% 0,100% 100%,84% 95%,66% 100%,48% 96%,30% 100%,12% 95%,3% 100%,1% 70%,0 40%)}
+.sidetab:hover{background:#ffffff;color:#111111}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;color:#e8e4dc}
+.social a:hover{color:#ff4a3d}
+@media (max-width: 760px){.sidenav{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;background:rgba(10,11,12,0.92);padding:4px 8px}.sidenav a.nl{font-size:15px;padding:8px 8px}.sidenav a.nl::before{display:none}.sidetab{margin:4px 0;min-height:44px;font-size:14px}}
+.news details{border-bottom:1px solid #2e2d33}
+.news summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px 40px;flex-wrap:wrap;padding:18px 56px 18px 20px;position:relative;font-size:17px;min-height:44px}
+.news summary::-webkit-details-marker{display:none}
+.news summary:hover{background:rgba(255,255,255,0.04)}
+.news details[open] summary{background:rgba(255,255,255,0.07)}
+.news .date{font-family:'Special Elite','Courier New',monospace;color:#d9443a;min-width:110px;letter-spacing:0.05em}
+.news .chev{position:absolute;right:20px;top:50%;transform:translateY(-50%) rotate(90deg);transition:transform 0.2s;color:#bdb8ae}
+.news details[open] .chev{transform:translateY(-50%) rotate(-90deg)}
+.news .body{padding:12px 20px 28px 170px;font-size:16px;color:#cfcac0}
+.news a.row{display:flex;align-items:center;gap:8px 40px;flex-wrap:wrap;padding:18px 56px 18px 20px;border-bottom:1px solid #2e2d33;text-decoration:none;font-size:17px;position:relative}
+.news a.row:hover{background:rgba(255,255,255,0.04)}
+@media (max-width: 760px){.news .body{padding:8px 20px 24px}}
+.cbtn{aspect-ratio:1/1;padding:0;margin:0;border:2px solid #3a3940;background:#111113;cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#5c5a60}
+.cbtn:hover,.cbtn.sel{border-color:#c8261e}
+.cthumb{filter:grayscale(1);transition:filter 0.3s}
+.cbtn:hover .cthumb,.cbtn.sel .cthumb{filter:none}
+.cq{font-family:'Shippori Mincho B1','Yu Mincho',serif;font-weight:800;font-size:44px;transition:color 0.3s}
+.cbtn:hover .cq,.cbtn.sel .cq{color:#c8261e}
+.oc{display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;background:#ffffff;transition:transform 0.2s,opacity 0.2s}
+.oc-steam{background:transparent}
+.oc:hover{transform:scale(1.08);opacity:0.85}
+.langsw{display:inline-flex;border:1px solid rgba(232,228,220,0.6)}
+.langsw button{font-family:'Special Elite','Courier New',monospace;font-size:15px;letter-spacing:0.08em;min-height:44px;padding:0 16px;background:rgba(0,0,0,0.45);color:#e8e4dc;border:0;cursor:pointer}
+.langsw button+button{border-left:1px solid rgba(232,228,220,0.6)}
+.langsw button.on{background:#e8e4dc;color:#111111}
+.langsw button:hover:not(.on){background:rgba(255,255,255,0.12)}
+.rv{opacity:0;transform:translateY(48px);transition:opacity 0.9s ease,transform 0.9s cubic-bezier(0.2,0.7,0.2,1)}
+.rv.d2{transition-delay:0.25s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+.btnred{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 36px;background:#c0261f;color:#ffffff;text-decoration:none;font-family:'Shippori Mincho B1','Yu Mincho','Hiragino Mincho ProN',serif;font-weight:800;font-size:17px;letter-spacing:0.12em}
+.btnred:hover{background:#d93a2f;color:#ffffff}
+.dock{position:fixed;right:14px;bottom:20px;z-index:30;display:flex;align-items:flex-end;gap:10px}
+.follow{display:flex;flex-direction:column;align-items:center;gap:4px;filter:drop-shadow(0 0 4px rgba(0,0,0,0.9))}
+.follow .fl{writing-mode:vertical-rl;font-family:'Special Elite','Courier New',monospace;font-size:12px;letter-spacing:0.2em;color:#e8e4dc;padding-bottom:4px}
+.follow .rule{width:22px;height:1px;background:rgba(232,228,220,0.7);margin:4px 0}
+.follow a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;color:#e8e4dc}
+.follow a:hover{color:#ff4a3d}
+.langsw.sm button{font-size:11px;min-height:28px;padding:0 9px}
+.gthumb{aspect-ratio:16/10;padding:0;margin:0;border:2px solid #3a3940;background:#111113;cursor:zoom-in;overflow:hidden;display:block}
+.gthumb img{transition:transform 0.4s ease,filter 0.4s ease;filter:brightness(0.85)}
+.gthumb:hover{border-color:#c8261e}
+.gthumb:hover img{transform:scale(1.04);filter:brightness(1)}
+.lb{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px}
+.lb-bg{position:absolute;inset:0;background:rgba(0,0,0,0.92);border:0;padding:0;cursor:zoom-out}
+.lb-btn{position:absolute;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border:1px solid rgba(232,228,220,0.5);background:rgba(0,0,0,0.5);color:#e8e4dc;cursor:pointer}
+.lb-btn:hover{color:#ff4a3d;border-color:#ff4a3d}
+.lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb-next{right:16px;top:50%;transform:translateY(-50%)}
+.lb-close{right:16px;top:16px}
+.tear{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:0;pointer-events:none}
+.hnoise{position:absolute;inset:0;background:url(assets/noise.png) repeat;background-size:256px 256px;opacity:0;pointer-events:none;mix-blend-mode:screen}
+.hbar{position:absolute;left:0;right:0;height:14%;top:-20%;background:rgba(255,255,255,0.08);opacity:0;pointer-events:none}
+.hg .hbase{animation:hgBase 0.5s steps(1) infinite}
+.hg .t1{opacity:1;filter:saturate(0.6) brightness(1.15);animation:hgT1 0.5s steps(1) infinite}
+.hg .t2{opacity:0.75;mix-blend-mode:screen;filter:sepia(1) saturate(8) hue-rotate(-40deg) brightness(0.9);animation:hgT2 0.5s steps(1) infinite}
+.hg .t3{opacity:0.7;mix-blend-mode:screen;filter:sepia(1) saturate(6) hue-rotate(150deg) brightness(0.9);animation:hgT3 0.5s steps(1) infinite}
+.hg .hnoise{opacity:0.45;animation:hgNoise 0.12s steps(3) infinite}
+.hg .hbar{opacity:1;animation:hgBar 0.5s linear infinite}
+.hg .hlogo{animation:hgLogo 0.5s steps(1) infinite}
+@keyframes hgBase{0%{transform:translate(0,0)}20%{transform:translate(-6px,2px)}40%{transform:translate(4px,-1px)}60%{transform:translate(0,0)}80%{transform:translate(8px,0)}}
+@keyframes hgT1{0%{clip-path:inset(12% 0 78% 0);transform:translateX(-46px)}20%{clip-path:inset(56% 0 30% 0);transform:translateX(34px)}40%{clip-path:inset(31% 0 61% 0);transform:translateX(-20px)}60%{clip-path:inset(82% 0 7% 0);transform:translateX(58px)}80%{clip-path:inset(4% 0 90% 0);transform:translateX(-30px)}}
+@keyframes hgT2{0%{clip-path:inset(40% 0 44% 0);transform:translateX(14px)}25%{clip-path:inset(8% 0 70% 0);transform:translateX(10px)}50%{clip-path:inset(66% 0 18% 0);transform:translateX(18px)}75%{clip-path:inset(22% 0 60% 0);transform:translateX(9px)}}
+@keyframes hgT3{0%{clip-path:inset(18% 0 66% 0);transform:translateX(-12px)}25%{clip-path:inset(60% 0 22% 0);transform:translateX(-16px)}50%{clip-path:inset(2% 0 84% 0);transform:translateX(-10px)}75%{clip-path:inset(74% 0 10% 0);transform:translateX(-18px)}}
+@keyframes hgNoise{0%{background-position:0 0}33%{background-position:-97px 61px}66%{background-position:53px -131px}100%{background-position:0 0}}
+@keyframes hgBar{0%{top:-20%}100%{top:110%}}
+@keyframes hgLogo{0%{transform:translate(0,0);filter:none}25%{transform:translate(-7px,0);filter:drop-shadow(4px 0 0 rgba(255,30,30,0.8)) drop-shadow(-4px 0 0 rgba(40,200,255,0.8))}50%{transform:translate(5px,2px)}75%{transform:translate(-3px,-2px);filter:drop-shadow(-5px 0 0 rgba(255,30,30,0.8)) drop-shadow(5px 0 0 rgba(40,200,255,0.8))}}
+@media (prefers-reduced-motion: reduce){.hg .hbase,.hg .t1,.hg .t2,.hg .t3,.hg .hnoise,.hg .hbar,.hg .hlogo{animation:none;opacity:0}}
+.hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+@keyframes hvIn{from{opacity:0}to{opacity:1}}
+.hg .hvid{animation:hgBase 0.5s steps(1) infinite}
+.gmain{display:block;width:100%;aspect-ratio:16/9;padding:0;margin:0;border:2px solid #3a3940;background:#111113;cursor:zoom-in;overflow:hidden}
+.gmain img{animation:hvIn 0.5s ease both}
+.gmain:hover{border-color:#c8261e}
+.gnav-prev{left:12px;top:50%;transform:translateY(-50%);width:44px;height:44px}
+.gnav-next{right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px}
+.gsm{aspect-ratio:16/10;padding:0;margin:0;border:2px solid #3a3940;background:#111113;cursor:pointer;overflow:hidden}
+.gsm img{filter:brightness(0.55) grayscale(0.4);transition:filter 0.3s}
+.gsm:hover img,.gsm.sel img{filter:none}
+.gsm.sel{border-color:#c8261e}
+.gstrip{margin-top:10px;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px}
+.gsm{border-width:1px}
+@media (max-width: 700px){.gstrip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84px;overflow-x:auto;padding-bottom:6px}}
+.rough{border:7px solid transparent;border-image:url(assets/frame_light.svg) 18 round;background-clip:padding-box}
+.cbtn,.gmain,.gsm{border-width:7px!important;border-style:solid!important;border-color:transparent!important;border-image:url(assets/frame_light.svg) 18 round!important;background-clip:padding-box}
+.gsm{border-width:5px!important}
+.cbtn:hover,.cbtn.sel,.gmain:hover,.gsm:hover,.gsm.sel{border-image:url(assets/frame_red.svg) 18 round!important}
+.gsm,.gsm:hover,.gsm.sel{border-width:7px!important;border-image-slice:12!important;border-image-repeat:stretch!important}
+.mvcard:hover .rough{border-image:url(assets/frame_red.svg) 18 round}
+.sndbtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid rgba(232,228,220,0.5);border-radius:50%;background:rgba(0,0,0,0.35);color:#e8e4dc;cursor:pointer}
+.sndbtn:hover{color:#ff4a3d;border-color:#ff4a3d}
+.newsmore{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border:1px solid rgba(232,228,220,0.5);border-radius:50%;background:transparent;color:#e8e4dc;cursor:pointer;transition:transform 0.3s,color 0.2s,border-color 0.2s}
+.newsmore:hover{color:#ff4a3d;border-color:#ff4a3d}
+.newsmore.open{transform:rotate(180deg)}
+.likebtn{position:relative;margin:14px 24px 0 0;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 12px;border:1px solid rgba(232,228,220,0.5);border-radius:22px;background:rgba(0,0,0,0.45);color:#e8e4dc;cursor:pointer;font-family:'Special Elite','Courier New',monospace;font-size:17px;letter-spacing:0.04em}
+.likebtn:hover{border-color:#ff4a3d}
+.likebtn .lh{display:inline-flex;color:#ff4a3d;filter:drop-shadow(0 0 6px rgba(255,60,40,0.6))}
+.likebtn.pop .lh{animation:likePop 0.45s ease}
+.likebtn .lplus{position:absolute;left:14px;top:-4px;color:#ff4a3d;font-size:14px;opacity:0;pointer-events:none}
+.likebtn.pop .lplus{animation:likeUp 0.7s ease}
+@keyframes likePop{0%{transform:scale(1)}35%{transform:scale(1.45)}70%{transform:scale(0.9)}100%{transform:scale(1)}}
+@keyframes likeUp{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-26px)}}
+@media (prefers-reduced-motion: reduce){.likebtn.pop .lh,.likebtn.pop .lplus{animation:none}}
+@media (max-width: 760px){.likebtn{margin:4px 0;min-height:40px}}
+.fl{font-size:14px;color:#cfcac0;text-decoration:none;padding:10px 0;display:inline-block}
+.fl:hover{color:#ff4a3d}
+.news .ext{display:inline-flex;vertical-align:-2px;margin-left:8px;color:#bdb8ae}
+.news a.row:hover .ext{color:#ff4a3d}
+.glitch{color:#ff4a3d;text-shadow:2px 0 #ff2a1f,-2px 0 #3fa7d6;transform:translate(2px,-1px) skewX(-8deg)!important}
+@media (prefers-reduced-motion: reduce){.jit,.drift,.blink,.flicker{animation:none}}
+
+</style>
+</head>
+<body>
+<div class="grunge" style="color: #e8e4dc; font-family: 'Shippori Mincho B1', 'Yu Mincho', 'Hiragino Mincho ProN', serif; line-height: 2">
+
+<div style="position: sticky; top: 0; height: 0; z-index: 20">
+<nav class="sidenav" aria-label="メインメニュー" data-i18n-attr="aria-label:navLabel">
+<div class="langsw sm" style="margin: 0 24px 14px 0" role="group" aria-label="Language">
+<button type="button" class="on" id="langJa" aria-pressed="true" lang="ja">日本語</button>
+<button type="button" id="langEn" aria-pressed="false" lang="en">English</button>
+</div>
+<a class="nl" href="#top">Top</a>
+<a class="nl" href="#news">News</a>
+<a class="nl" href="#overview">Overview</a>
+<a class="nl" href="#story">Story</a>
+<a class="nl" href="#character">Character</a>
+<a class="nl" href="#movie">Movie</a>
+<a class="nl" href="#gallery">Gallery</a>
+<a class="nl" href="#info">Info</a>
+</nav>
+</div>
+<div class="dock">
+<div class="follow">
+<span class="fl">FOLLOW US</span>
+<span class="rule" aria-hidden="true"></span>
+<a href="https://x.com/project_os6" aria-label="X（旧Twitter）公式アカウント" data-i18n-attr="aria-label:xLabel"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a href="https://www.tiktok.com/@project_os6" aria-label="TikTok公式アカウント（@project_os6）" data-i18n-attr="aria-label:ttLabel"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a>
+<span class="rule" aria-hidden="true"></span>
+<a href="mailto:ent.general@i-rori-ent.com" target="_blank" rel="noopener" aria-label="メールでのお問い合わせ（ent.general@i-rori-ent.com）" data-i18n-attr="aria-label:mailLabel"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 6l9 7 9-7"></path></svg></a>
+</div>
+</div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="">
+<button type="button" class="lb-bg" data-lb="close" aria-label="閉じる" data-i18n-attr="aria-label:close"></button>
+<figure style="position: relative; margin: 0; max-width: min(1200px, 92vw); display: flex; flex-direction: column; align-items: center; gap: 12px">
+<img class="rough" id="lbImg" src="assets/gal1.jpg" alt="" style="max-width: 100%; max-height: 80vh; width: auto; height: auto; display: block; box-shadow: 0 0 60px rgba(0,0,0,0.9)">
+<figcaption style="font-family: 'Special Elite', 'Courier New', monospace; font-size: 15px; letter-spacing: 0.1em; color: #bdb8ae" id="lbCount">1 / 10</figcaption>
+</figure>
+<button type="button" class="lb-btn lb-prev" data-lb="prev" aria-label="前の画像" data-i18n-attr="aria-label:prev"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button type="button" class="lb-btn lb-next" data-lb="next" aria-label="次の画像" data-i18n-attr="aria-label:next"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></button>
+<button type="button" class="lb-btn lb-close" data-lb="close" aria-label="閉じる" data-i18n-attr="aria-label:close"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg></button>
+</div>
+
+
+
+<section id="top" aria-label="トップ" style="position: relative; min-height: 880px; background: #050506; overflow: hidden; display: flex; flex-direction: column; justify-content: center" data-i18n-attr="aria-label:topLabel">
+<video class="hvid" src="assets/hero_video2.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,0,0,0.35)"></div>
+
+<div style="position: absolute; top: 46px; left: 50px; z-index: 5; display: flex; align-items: center; gap: 14px; font-family: 'DotGothic16', monospace; font-size: 18px; letter-spacing: 0.12em; color: #e8e4dc"><span><span class="blink" style="color: #ff4a3d">●</span> REC　<span id="clock">00:13:13</span></span>
+<button type="button" class="sndbtn" id="sndbtn" aria-label="音声をオンにする" aria-pressed="false">
+<svg id="sndOn" hidden aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 6a8.5 8.5 0 0 1 0 12"></path></svg>
+<svg id="sndOff" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"></path><path d="M17 9l5 6"></path><path d="M22 9l-5 6"></path></svg>
+</button>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; padding: 140px clamp(24px, 5vw, 80px) 160px; max-width: 620px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 22px">
+<img src="assets/logo_official.png" alt="怖録 osoroku" style="width: 100%; max-width: 560px; height: auto">
+<p style="margin: 0; font-family: 'Special Elite', 'Courier New', monospace; font-size: 34px; letter-spacing: 0.06em; line-height: 1.2">2026.12 <span style="font-size: 20px; letter-spacing: 0.15em">COMING SOON</span></p>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 12px">
+<a href="https://store.steampowered.com/app/4752680/%E6%80%96%E9%8C%B2/?l=japanese" data-steam class="btnred"><span data-i18n="wish">ウィッシュリスト登録</span></a>
+</div>
+</div>
+</div>
+
+</section>
+
+<section id="news" style="padding: 96px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s5" style="margin: 0 0 40px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d2" data-g="s5">_</span></span></h2>
+<div data-reveal-key="r0" class="rv">
+<div class="news" style="border-top: 1px solid #2e2d33">
+<details open>
+<summary><span class="date">2026.11.09</span><span><span data-i18n="nw1t">公式TikTokを解禁しました</span></span><span class="chev" aria-hidden="true">›</span></summary>
+<div class="body">
+<p style="margin: 0"><span data-i18n="nw1b">『怖録』の公式TikTokアカウントを解禁しました。こちらでは、思わず背筋が凍る怖い話をひたすらお届けしていきます。</span><br><span data-i18n="nw1c">眠れない夜のお供にどうぞ。</span></p>
+<p style="margin: 12px 0 0"><a href="https://www.tiktok.com/@project_os6">TikTok：@project_os6</a></p>
+</div>
+</details>
+<details>
+<summary><span class="date">----.--.--</span><span><span data-i18n="nw2t">リリース決定しました</span></span><span class="chev" aria-hidden="true">›</span></summary>
+<div class="body">
+<p style="margin: 0"><span data-i18n="nw2b">『怖録』のリリースが決定しました！ 発売日や価格などの詳細は、決まり次第このサイトと公式Xでお知らせします。</span><br><span data-i18n="nw2c">Steamのウィッシュリストに登録して、続報をお待ちください。</span></p>
+<p style="margin: 12px 0 0"><a href="https://store.steampowered.com/app/4752680/%E6%80%96%E9%8C%B2/?l=japanese" data-steam><span data-i18n="nwSteam">Steamストアページはこちら</span></a></p>
+</div>
+</details>
+<details>
+<summary><span class="date">2026.09.16</span><span><span data-i18n="nw3t">東京ゲームショウ2026に出展しました</span></span><span class="chev" aria-hidden="true">›</span></summary>
+<div class="body">
+<p style="margin: 0"><span data-i18n="nw3b">「東京ゲームショウ2026」に『怖録』を出展しました。</span><br><span data-i18n="nw3c">ブースにお立ち寄りいただいた皆さま、本当にありがとうございました！</span><br><span data-i18n="nw3d">いただいたご感想やご意見は、今後の開発に活かしてまいります。</span></p>
+</div>
+</details>
+<div id="newsMore" hidden>
+<a class="row" href="https://youtu.be/fhfx5eRH2d8"><span class="date">2026.09.14</span><span><span data-i18n="nw4t">MV「だいちゅき♡ワタヌキさん」を公開しました</span><span class="ext" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"></path><path d="M20 4l-9 9"></path><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg></span></span></a>
+<a class="row" href="https://youtu.be/wq_HenWeN4U"><span class="date">2026.09.14</span><span><span data-i18n="nw5t">怖録の公式PVを公開しました</span><span class="ext" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"></path><path d="M20 4l-9 9"></path><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg></span></span></a>
+<details>
+<summary><span class="date">2026.05.14</span><span><span data-i18n="nw6t">X公式アカウントを開設しました</span></span><span class="chev" aria-hidden="true">›</span></summary>
+<div class="body">
+<p style="margin: 0"><span data-i18n="nw6b">『怖録』の公式Xアカウントを開設しました。開発の様子や最新情報を、いち早くお届けしていきます。ぜひフォローしてください。</span></p>
+<p style="margin: 12px 0 0"><a href="https://x.com/project_os6">X：@project_os6</a></p>
+</div>
+</details>
+</div>
+</div>
+<div style="display: flex; justify-content: center; margin-top: 20px">
+<button type="button" class="newsmore" id="newsBtn" aria-expanded="false" aria-label="お知らせをもっと見る">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="overview" class="bgghost" style="padding: 112px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s0" style="margin: 0 0 24px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit" data-g="s0">_</span></span></h2>
+<div data-reveal-key="r1" class="rv">
+<p style="margin: 0 0 48px; font-family: 'Shippori Mincho B1', 'Yu Mincho', serif; font-weight: 800; font-size: clamp(30px, 4.2vw, 58px); line-height: 1.45; color: #e8e4dc"><span data-i18n="catch">恐怖を撮れ。</span><br><span data-i18n="catch2">動画をバズらせろ。</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 40px; margin-bottom: 40px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 110px"><img src="assets/icon0.jpg" alt="" style="width: 96px; height: 96px; mix-blend-mode: lighten"><span style="font-weight: 700"><span data-i18n="i1">一人称視点</span></span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 110px"><img src="assets/icon1.jpg" alt="" style="width: 96px; height: 96px; mix-blend-mode: lighten"><span style="font-weight: 700"><span data-i18n="i2">探索</span></span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 110px"><img src="assets/icon2.jpg" alt="" style="width: 96px; height: 96px; mix-blend-mode: lighten"><span style="font-weight: 700"><span data-i18n="i3">編集／投稿</span></span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 110px"><img src="assets/icon3.jpg" alt="" style="width: 96px; height: 96px; mix-blend-mode: lighten"><span style="font-weight: 700"><span data-i18n="i4">謎解き</span></span></div>
+</div>
+<div>
+<p style="margin: 0; max-width: 60em; font-size: 18px"><span data-i18n="ovBody">『怖録』(おそろく)は、廃校となった小学校を探索する一人称視点の3Dホラーゲームです。</span><br><span data-i18n="ovBody2">プレイヤーは心霊系動画投稿者となり、校内に残された都市伝説や怪奇現象を撮影しながら探索を進めます。</span><br><span data-i18n="ovBody3">撮影した映像を編集/投稿し、登録者数やいいね数を伸ばしながら、</span><br><span data-i18n="ovBody4">より多くの怪異や学校に隠された秘密へと迫っていきます。</span></p>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<img class="rough" src="assets/ov1.jpg" alt="下駄箱の目" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block" data-i18n-attr="alt:a6">
+<img class="rough" src="assets/ov2.jpg" alt="障子に浮かぶ無数の手形" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block" data-i18n-attr="alt:a1">
+<img class="rough" src="assets/ov3.jpg" alt="和式トイレにうずくまる影" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block" data-i18n-attr="alt:a10">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="story" style="position: relative; overflow: hidden; padding: 140px 24px; border-top: 1px solid #26252a">
+<img src="assets/story_bg.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; opacity: 0.85; filter: brightness(1.25) contrast(1.05); pointer-events: none">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(10,11,12,0.05) 0%, rgba(10,11,12,0.25) 55%, rgba(10,11,12,0.75) 100%); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,11,12,0.85) 0%, rgba(10,11,12,0.7) 30%, rgba(10,11,12,0.35) 55%, rgba(10,11,12,0) 75%); pointer-events: none"></div>
+<div style="position: relative; max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 460px; min-width: 0; max-width: 760px">
+<h2 data-type-key="s1" style="margin: 0 0 48px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d1" data-g="s1">_</span></span></h2>
+<p style="margin: 0 0 40px; font-family: 'Shippori Mincho B1', 'Yu Mincho', serif; font-weight: 800; font-size: clamp(30px, 4.2vw, 58px); line-height: 1.45; color: #e8e4dc"><span data-i18n="stHead">登録者数10万人を</span><br><span data-i18n="stHead2">目指せ。</span></p>
+<div data-reveal-key="r8" class="rv d2">
+<div style="font-size: 18px">
+<p style="margin: 0"><span data-i18n="st1">あなたは噂の廃校「屠屋（ほふりや）小学校」へ足を踏み入れる。</span><br><span data-i18n="st1b">目的は、学校に残された都市伝説を撮影し、動画サイトに投稿して収益を得ること。</span></p>
+<p style="margin: 24px 0 0"><span data-i18n="st2">果たしてあなたは登録者数10万人を達成できるのか―。</span></p>
+<p style="margin: 8px 0 0; font-family: 'Shippori Mincho B1', 'Yu Mincho', serif; font-weight: 800; font-size: 24px"><span data-i18n="st3">そして、その先に待つものとは……？</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="character" style="padding: 112px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s2" style="margin: 0 0 48px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d2" data-g="s2">_</span></span></h2>
+<div data-reveal-key="r2" class="rv">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 56px; align-items: flex-start">
+<div style="flex: 0 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+<button type="button" class="cbtn sel" data-cidx="0" aria-label="ワタヌキさん（CV：村上 奈津実）" aria-pressed="true">
+<img class="cthumb" src="assets/wata_horror.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="cbtn" data-cidx="1" aria-label="未公開のキャラクター（CV：まちだ 侑子）" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="2" aria-label="未公開のキャラクター（CV：喜多田 悠）" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="3" aria-label="未公開のキャラクター（CV：三木谷 奈々）" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="4" aria-label="未公開のキャラクター（CV：小林 英司）" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="5" aria-label="未公開のキャラクター（CV：岩井 遥）" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="6" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="7" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="8" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="9" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="10" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="11" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+<button type="button" class="cbtn" data-cidx="12" aria-label="未公開のキャラクター" aria-pressed="false">
+<span class="cq">？</span>
+</button>
+</div>
+<div style="flex: 0 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div class="rough" style="width: 100%; aspect-ratio: 1 / 1; background: #111113; overflow: hidden; display: flex; align-items: center; justify-content: center">
+<img id="charImg" src="assets/wata_horror.jpg" alt="ワタヌキさん" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<span id="charQ" hidden style="font-family: 'Shippori Mincho B1', 'Yu Mincho', serif; font-weight: 800; font-size: 120px; color: #4a4950">？</span>
+</div>
+<div style="min-width: 0">
+<p style="margin: 0; font-family: 'Shippori Mincho B1', 'Yu Mincho', serif; font-weight: 800; font-size: 40px; line-height: 1.4"><span class="drift" id="charName" data-g="c1">ワタヌキさん</span></p>
+<p style="margin: 6px 0 20px; font-family: 'DotGothic16', monospace; font-size: 16px; color: #bdb8ae"><span data-i18n="cv">CV：</span><span id="charCv">村上 奈津実</span></p>
+<p style="margin: 0; font-size: 16px; color: #cfcac0" id="charIntro">ワタヌキさんってなんなんだ？</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="movie" style="padding: 112px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s3" style="margin: 0 0 48px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d3" data-g="s3">_</span></span></h2>
+<div data-reveal-key="r3" class="rv">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px">
+<a class="mvcard" href="https://youtu.be/wq_HenWeN4U" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none">
+<div class="rough" style="position: relative; aspect-ratio: 16 / 9; overflow: hidden">
+<img src="assets/thumb_pv.jpg" alt="PVのサムネイル" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8)" data-i18n-attr="alt:pvAlt">
+<svg aria-hidden="true" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4z"></path></svg>
+</div>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; color: #bdb8ae; letter-spacing: 0.05em"><span data-i18n="pvL">PV（プロモーション映像）</span></span><span style="font-weight: 700; font-size: 19px; line-height: 1.6"><span data-i18n="pvT">『怖録』ゲームPV｜一人称視点3Dホラーゲーム</span></span></span>
+</a>
+<a class="mvcard" href="https://youtu.be/fhfx5eRH2d8" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none">
+<div class="rough" style="position: relative; aspect-ratio: 16 / 9; overflow: hidden">
+<img src="assets/thumb_mv.jpg" alt="MVのサムネイル" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8)" data-i18n-attr="alt:mvAlt">
+<svg aria-hidden="true" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4z"></path></svg>
+</div>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; color: #bdb8ae; letter-spacing: 0.05em"><span data-i18n="mvL">MV（ミュージックビデオ）</span></span><span style="font-weight: 700; font-size: 19px; line-height: 1.6"><span data-i18n="mvT">『だいちゅき♡ワタヌキさん』Official Music Video｜『怖録』</span></span></span>
+</a>
+</div>
+<p style="margin: 20px 0 0; text-align: right; font-size: 14px; color: #bdb8ae"><span data-i18n="mvNote">画像をクリックするとYouTubeで動画が開きます。</span></p>
+</div>
+</div>
+</section>
+
+<section id="gallery" style="padding: 112px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s4" style="margin: 0 0 48px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d1" data-g="s4">_</span></span></h2>
+<div data-reveal-key="r4" class="rv">
+<div style="max-width: 1120px; margin: 0 auto">
+<div style="position: relative">
+<button type="button" class="gmain" id="gmain" aria-label="拡大表示：習字が貼られた教室">
+<img id="gmainImg" src="assets/gal1.jpg" alt="習字が貼られた教室" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="lb-btn gnav-prev" id="gPrev" aria-label="前の画像" data-i18n-attr="aria-label:prev"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button type="button" class="lb-btn gnav-next" id="gNext" aria-label="次の画像" data-i18n-attr="aria-label:next"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+<div class="gstrip">
+<button type="button" class="gsm sel" data-gidx="0" aria-label="習字が貼られた教室" data-i18n-attr="aria-label:g1" aria-pressed="true">
+<img src="assets/gal1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="1" aria-label="保健室のベッドに残る人影" data-i18n-attr="aria-label:g2" aria-pressed="false">
+<img src="assets/gal2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="2" aria-label="荒れた図書室" data-i18n-attr="aria-label:g3" aria-pressed="false">
+<img src="assets/gal3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="3" aria-label="棚に置かれた片目のだるま" data-i18n-attr="aria-label:g4" aria-pressed="false">
+<img src="assets/gal4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="4" aria-label="霧に包まれた教室" data-i18n-attr="aria-label:g5" aria-pressed="false">
+<img src="assets/gal5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="5" aria-label="ガラスケースの人体模型" data-i18n-attr="aria-label:g6" aria-pressed="false">
+<img src="assets/gal6.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="6" aria-label="音楽室の肖像画" data-i18n-attr="aria-label:g7" aria-pressed="false">
+<img src="assets/gal7.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="7" aria-label="暗がりのグランドピアノ" data-i18n-attr="aria-label:g8" aria-pressed="false">
+<img src="assets/gal8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="8" aria-label="クレヨンと書き置きが残された机" data-i18n-attr="aria-label:g9" aria-pressed="false">
+<img src="assets/gal9.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+<button type="button" class="gsm" data-gidx="9" aria-label="灯りのともる洞窟の牢" data-i18n-attr="aria-label:g10" aria-pressed="false">
+<img src="assets/gal10.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</button>
+</div>
+</div>
+<p style="max-width: 1120px; margin: 16px auto 0; text-align: right; font-size: 14px; color: #bdb8ae"><span data-i18n="ssNote">※開発中の画面です。変更する場合もあります。</span></p>
+</div>
+</div>
+</section>
+
+<section id="info" style="padding: 112px 24px; border-top: 1px solid #26252a">
+<div style="max-width: 1120px; margin: 0 auto">
+<h2 data-type-key="s6" style="margin: 0 0 48px; min-height: 1.2em"><span style="display: inline-block; font-family: 'Special Elite', 'Courier New', monospace; font-weight: 400; font-size: clamp(44px, 5vw, 68px); line-height: 1.2; color: #c8261e"><span class="jit d3" data-g="s6">_</span></span></h2>
+<div data-reveal-key="r5" class="rv">
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 18px">
+<tbody>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; width: 160px; color: #bdb8ae; font-weight: 500"><span data-i18n="thTitle">タイトル</span></th><td style="padding: 16px 0"><span data-i18n="tdTitle">怖録（おそろく）</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thGenre">ジャンル</span></th><td style="padding: 16px 0"><span data-i18n="tdGenre">一人称視点 3Dホラー</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thDate">発売日</span></th><td style="padding: 16px 0"><span data-i18n="tdDate">2026年12月末 予定</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thPlat">対応機種</span></th><td style="padding: 16px 0">Steam</td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thPlayers">プレイ人数</span></th><td style="padding: 16px 0"><span data-i18n="tdPlayers">1人</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thLang">対応言語</span></th><td style="padding: 16px 0"><span data-i18n="tdLang">表示言語：日本語／英語</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thPrice">価格</span></th><td style="padding: 16px 0"><span data-i18n="tdPrice">未定</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thRating">レーティング</span></th><td style="padding: 16px 0"><span data-i18n="tdRating">CERO：[区分]</span></td></tr>
+<tr style="border-bottom: 1px solid #2e2d33"><th scope="row" style="text-align: left; padding: 16px 24px 16px 0; color: #bdb8ae; font-weight: 500"><span data-i18n="thDev">開発・運営・販売</span></th><td style="padding: 16px 0"><span data-i18n="tdDev">株式会社アイロリ・エンタテインメント</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 80px 0 20px; text-align: center; font-family: 'Special Elite', 'Courier New', monospace; font-size: 22px; letter-spacing: 0.1em; color: #bdb8ae">Official Links</p>
+<div class="olinks" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px">
+<a href="https://x.com/project_os6" aria-label="X（旧Twitter）公式アカウント" class="oc" data-i18n-attr="aria-label:xLabel"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#0a0b0c"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a href="https://www.tiktok.com/@project_os6" aria-label="TikTok公式アカウント（@project_os6）" class="oc" data-i18n-attr="aria-label:ttLabel"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="#0a0b0c"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a>
+<a href="https://store.steampowered.com/app/4752680/%E6%80%96%E9%8C%B2/?l=japanese" data-steam aria-label="Steamストアページ" class="oc oc-steam" data-i18n-attr="aria-label:stLabel"><svg aria-hidden="true" width="72" height="72" viewBox="0 0 88.47 88.47" fill="#ffffff"><path d="M44.08,0A44.23,44.23,0,0,0,0,40.69l23.71,9.8a12.49,12.49,0,0,1,7.05-2.18l.69,0L42,33.05v-.22A16.68,16.68,0,1,1,58.68,49.52H58.3l-15,10.73c0,.2,0,.4,0,.6a12.52,12.52,0,0,1-24.8,2.46l-17-7A44.24,44.24,0,1,0,44.08,0Z"></path><path d="M27.72,67.12l-5.43-2.24A9.4,9.4,0,1,0,27.43,52L33,54.35a6.92,6.92,0,1,1-5.32,12.77Z"></path><path d="M69.8,32.83A11.12,11.12,0,1,0,58.68,44,11.13,11.13,0,0,0,69.8,32.83Zm-19.45,0a8.35,8.35,0,1,1,8.35,8.35A8.35,8.35,0,0,1,50.35,32.82Z"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="padding: 48px 24px; border-top: 1px solid #26252a; text-align: center">
+<p style="margin: 0"><img src="assets/irori_logo.png" alt="IRORI ENTERTAINMENT" style="width: 180px; max-width: 50%; height: auto; opacity: 0.9"></p>
+<nav aria-label="サイト情報" style="margin: 18px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px" data-i18n-attr="aria-label:siteInfo">
+<a class="fl" href="contact.html"><span data-i18n="fContact">お問い合わせ</span></a>
+<a class="fl" href="privacy.html"><span data-i18n="fPrivacy">プライバシーポリシー</span></a>
+<a class="fl" href="terms.html"><span data-i18n="fTerms">サイト利用条件</span></a>
+</nav>
+<p style="margin: 10px 0 0; font-size: 13px; color: #9a958c"><span data-i18n="copy">© 2019 I-rori Entertainment Co., Ltd.</span></p>
+</footer>
+
+</div>
+<script>
+(function () {
+  'use strict';
+  var DICT = {"nw1t": {"ja": "公式TikTokを解禁しました", "en": "Official TikTok is now live"}, "nw1b": {"ja": "『怖録』の公式TikTokアカウントを解禁しました。こちらでは、思わず背筋が凍る怖い話をひたすらお届けしていきます。", "en": "The official OSOROKU TikTok account is now live. There, we will be posting chilling scary stories, one after another."}, "nw1c": {"ja": "眠れない夜のお供にどうぞ。", "en": "Perfect company for a sleepless night."}, "nw2t": {"ja": "リリース決定しました", "en": "Release confirmed"}, "nw2b": {"ja": "『怖録』のリリースが決定しました！ 発売日や価格などの詳細は、決まり次第このサイトと公式Xでお知らせします。", "en": "OSOROKU has been confirmed for release! Details such as the release date and price will be announced on this site and our official X account as soon as they are decided."}, "nw2c": {"ja": "Steamのウィッシュリストに登録して、続報をお待ちください。", "en": "Add the game to your Steam wishlist and stay tuned."}, "nw3t": {"ja": "東京ゲームショウ2026に出展しました", "en": "We exhibited at Tokyo Game Show 2026"}, "nw3b": {"ja": "「東京ゲームショウ2026」に『怖録』を出展しました。", "en": "OSOROKU was exhibited at Tokyo Game Show 2026."}, "nw3c": {"ja": "ブースにお立ち寄りいただいた皆さま、本当にありがとうございました！", "en": "Thank you so much to everyone who stopped by our booth!"}, "nw3d": {"ja": "いただいたご感想やご意見は、今後の開発に活かしてまいります。", "en": "We will put all of your feedback to good use as development continues."}, "nw4t": {"ja": "MV「だいちゅき♡ワタヌキさん」を公開しました", "en": "“Daichuki ♡ Watanuki-san” music video released"}, "nw4b": {"ja": "『怖録』のミュージックビデオ「だいちゅき♡ワタヌキさん」をYouTubeで公開しました。かわいいのに、どこか不気味なワタヌキさんの世界をお楽しみください。", "en": "The OSOROKU music video “Daichuki ♡ Watanuki-san” is now available on YouTube. Enjoy the cute yet strangely unsettling world of Watanuki-san."}, "nw5t": {"ja": "怖録の公式PVを公開しました", "en": "The official OSOROKU trailer is out"}, "nw5b": {"ja": "『怖録』の公式PVをYouTubeで公開しました。廃校に潜む怪異と、恐怖を撮影して投稿するゲームプレイの様子を、ぜひご覧ください。", "en": "The official trailer for OSOROKU is now on YouTube. Get a look at the apparitions lurking in the abandoned school, and at gameplay where you film the fear and upload it."}, "nw6t": {"ja": "X公式アカウントを開設しました", "en": "Official X account launched"}, "nw6b": {"ja": "『怖録』の公式Xアカウントを開設しました。開発の様子や最新情報を、いち早くお届けしていきます。ぜひフォローしてください。", "en": "We have launched the official X account for OSOROKU, where you will get development updates and the latest news first. Be sure to follow us!"}, "nwSteam": {"ja": "Steamストアページはこちら", "en": "Visit the Steam store page"}, "nwWatch": {"ja": "YouTubeで見る", "en": "Watch on YouTube"}, "mvNote": {"ja": "画像をクリックするとYouTubeで動画が開きます。", "en": "Click an image to watch the video on YouTube."}, "siteInfo": {"ja": "サイト情報", "en": "Site information"}, "fContact": {"ja": "お問い合わせ", "en": "Contact"}, "fPrivacy": {"ja": "プライバシーポリシー", "en": "Privacy Policy"}, "fTerms": {"ja": "サイト利用条件", "en": "Terms of Use"}, "n4t": {"ja": "公式Xアカウントを開設しました", "en": "Official X account launched"}, "n4a": {"ja": "『怖録』の公式Xアカウントを開設しました。開発の様子や最新情報を発信していきます。", "en": "We have launched the official X account for OSOROKU, where we will share development updates and the latest news. "}, "n5t": {"ja": "『怖録』の開発を発表しました", "en": "OSOROKU announced"}, "n5a": {"ja": "心霊系動画投稿者となって廃校を探索する、一人称視点の3Dホラーゲーム『怖録』の開発を発表しました。", "en": "We have announced OSOROKU, a first-person 3D horror game in which you explore an abandoned school as a paranormal video creator."}, "g6": {"ja": "ガラスケースの人体模型", "en": "An anatomical model in a glass case"}, "g7": {"ja": "音楽室の肖像画", "en": "Portraits in the music room"}, "g8": {"ja": "暗がりのグランドピアノ", "en": "A grand piano in the dark"}, "g9": {"ja": "クレヨンと書き置きが残された机", "en": "A table left with crayons and a note"}, "g10": {"ja": "灯りのともる洞窟の牢", "en": "Lantern-lit cells in a cave"}, "g1": {"ja": "習字が貼られた教室", "en": "A classroom lined with calligraphy"}, "g2": {"ja": "保健室のベッドに残る人影", "en": "A shadow left on an infirmary bed"}, "g3": {"ja": "荒れた図書室", "en": "A ruined library"}, "g4": {"ja": "棚に置かれた片目のだるま", "en": "A one-eyed daruma on a shelf"}, "g5": {"ja": "霧に包まれた教室", "en": "A classroom swallowed by fog"}, "thPlayers": {"ja": "プレイ人数", "en": "Players"}, "tdPlayers": {"ja": "1人", "en": "1"}, "thLang": {"ja": "対応言語", "en": "Languages"}, "tdLang": {"ja": "表示言語：日本語／英語", "en": "Interface: Japanese / English"}, "thDev": {"ja": "開発・運営・販売", "en": "Developer / Operator / Publisher"}, "tdDev": {"ja": "株式会社アイロリ・エンタテインメント", "en": "I-rori Entertainment Co., Ltd."}, "stHead": {"ja": "登録者数10万人を", "en": "Aim for"}, "stHead2": {"ja": "目指せ。", "en": "100,000 subscribers."}, "close": {"ja": "閉じる", "en": "Close"}, "prev": {"ja": "前の画像", "en": "Previous image"}, "next": {"ja": "次の画像", "en": "Next image"}, "enlarge": {"ja": "拡大表示：", "en": "Enlarge: "}, "a13": {"ja": "キービジュアル", "en": "Key visual"}, "mailLabel": {"ja": "メールでのお問い合わせ（ent.general@i-rori-ent.com）", "en": "Contact us by email (ent.general@i-rori-ent.com)"}, "navLabel": {"ja": "メインメニュー", "en": "Main menu"}, "topLabel": {"ja": "トップ", "en": "Top"}, "catch": {"ja": "恐怖を撮れ。", "en": "Film the fear."}, "catch2": {"ja": "動画をバズらせろ。", "en": "Make it go viral."}, "wish": {"ja": "ウィッシュリスト登録", "en": "Add to Wishlist"}, "xLabel": {"ja": "X（旧Twitter）公式アカウント", "en": "Official X (Twitter) account"}, "ttLabel": {"ja": "TikTok公式アカウント（@project_os6）", "en": "Official TikTok account (@project_os6)"}, "stLabel": {"ja": "Steamストアページ", "en": "Steam store page"}, "n1t": {"ja": "公式サイトを公開しました", "en": "Official website launched"}, "n1a": {"ja": "『怖録』の公式サイトを公開しました。", "en": "The official website for OSOROKU is now live."}, "n1b": {"ja": "ゲームの最新情報は、本サイトと公式Xアカウントでお知らせしていきます。", "en": "We will share the latest news on this site and on our official X account."}, "n2t": {"ja": "Steamストアページを公開しました", "en": "Steam store page now live"}, "n2a": {"ja": "『怖録』のSteamストアページを公開しました。", "en": "The Steam store page for OSOROKU is now live."}, "n2b": {"ja": "ウィッシュリストへの登録をお願いします。", "en": "Please add it to your wishlist. "}, "n2c": {"ja": "Steamストアページはこちら", "en": "Visit the Steam store page"}, "n3t": {"ja": "MV「だいちゅきワタヌキさん」を公開しました", "en": "“Daichuki ♡ Watanuki-san” music video released"}, "ov1": {"ja": "怪異を録画＆投稿して", "en": "Record and upload the paranormal."}, "ov2": {"ja": "登録者数10万人をめざせ！", "en": "Hit 100,000 subscribers!"}, "i1": {"ja": "一人称視点", "en": "First-person"}, "i2": {"ja": "探索", "en": "Explore"}, "i3": {"ja": "編集／投稿", "en": "Edit & Upload"}, "i4": {"ja": "謎解き", "en": "Puzzles"}, "ovBody": {"ja": "『怖録』(おそろく)は、廃校となった小学校を探索する一人称視点の3Dホラーゲームです。", "en": "OSOROKU is a first-person 3D horror game set in an abandoned elementary school."}, "ovBody2": {"ja": "プレイヤーは心霊系動画投稿者となり、校内に残された都市伝説や怪奇現象を撮影しながら探索を進めます。", "en": "You play as a paranormal video creator, exploring the building while filming the urban legends and strange phenomena left behind."}, "ovBody3": {"ja": "撮影した映像を編集/投稿し、登録者数やいいね数を伸ばしながら、", "en": "Edit and upload your footage, grow your subscribers and likes,"}, "ovBody4": {"ja": "より多くの怪異や学校に隠された秘密へと迫っていきます。", "en": "and draw ever closer to more apparitions and the secrets the school is hiding."}, "sev1": {"ja": "廃校に残された", "en": "The "}, "sev2": {"ja": "「7つの不思議」", "en": " “Seven Mysteries” of an abandoned school"}, "st1": {"ja": "あなたは噂の廃校「屠屋（ほふりや）小学校」へ足を踏み入れる。", "en": "You set foot in Hofuriya Elementary, an abandoned school surrounded by rumors."}, "st1b": {"ja": "目的は、学校に残された都市伝説を撮影し、動画サイトに投稿して収益を得ること。", "en": "Your goal: film the urban legends left behind in the school, upload them to a video site, and earn money."}, "st2": {"ja": "果たしてあなたは登録者数10万人を達成できるのか―。", "en": "Can you reach 100,000 subscribers?"}, "st3": {"ja": "そして、その先に待つものとは……？", "en": "And what awaits him beyond that…?"}, "pvL": {"ja": "PV（プロモーション映像）", "en": "PV (Promotional Video)"}, "pvT": {"ja": "『怖録』ゲームPV｜一人称視点3Dホラーゲーム", "en": "OSOROKU Game PV | First-Person 3D Horror Game"}, "mvL": {"ja": "MV（ミュージックビデオ）", "en": "MV (Music Video)"}, "mvT": {"ja": "『だいちゅき♡ワタヌキさん』Official Music Video｜『怖録』", "en": "“Daichuki ♡ Watanuki-san” Official Music Video | OSOROKU"}, "pvAlt": {"ja": "PVのサムネイル", "en": "PV thumbnail"}, "mvAlt": {"ja": "MVのサムネイル", "en": "MV thumbnail"}, "ssNote": {"ja": "※開発中の画面です。変更する場合もあります。", "en": "*Screens are from a build in development and are subject to change."}, "thTitle": {"ja": "タイトル", "en": "Title"}, "thGenre": {"ja": "ジャンル", "en": "Genre"}, "thDate": {"ja": "発売日", "en": "Release"}, "thPlat": {"ja": "対応機種", "en": "Platform"}, "thPrice": {"ja": "価格", "en": "Price"}, "thRating": {"ja": "レーティング", "en": "Rating"}, "tdTitle": {"ja": "怖録（おそろく）", "en": "OSOROKU (怖録)"}, "tdGenre": {"ja": "一人称視点 3Dホラー", "en": "First-person 3D horror"}, "tdDate": {"ja": "2026年12月末 予定", "en": "Late December 2026 (planned)"}, "tdPrice": {"ja": "未定", "en": "TBA"}, "tdRating": {"ja": "CERO：[区分]", "en": "CERO: [rating]"}, "wish2": {"ja": "Steamでウィッシュリストに追加", "en": "Add to Wishlist on Steam"}, "crDev": {"ja": "開発・運営", "en": "Development & Publishing"}, "crCo": {"ja": "アイロリ・エンタテインメント", "en": "IRORI Entertainment"}, "crMus": {"ja": "音楽", "en": "Music"}, "crMusN": {"ja": "近藤　祐輔", "en": "Yusuke Kondo"}, "crSong": {"ja": "主題歌", "en": "Theme Song"}, "crSongN": {"ja": "柊　優花", "en": "Yuka Hiiragi"}, "copy": {"ja": "© 2019 I-rori Entertainment Co., Ltd.", "en": "© 2019 I-rori Entertainment Co., Ltd."}, "a1": {"ja": "障子に浮かぶ無数の手形", "en": "Countless handprints on a shoji screen"}, "a2": {"ja": "習字が貼られた荒れた教室", "en": "A ruined classroom lined with calligraphy"}, "a3": {"ja": "暗い窓辺", "en": "A dark window"}, "a4": {"ja": "下駄箱の隙間からのぞく目", "en": "Eyes peering out from shoe lockers"}, "a5": {"ja": "障子の手形", "en": "Handprints on a shoji screen"}, "a6": {"ja": "下駄箱の目", "en": "Eyes in the shoe lockers"}, "a7": {"ja": "霧の理科室", "en": "A fog-filled science room"}, "a8": {"ja": "保健室のベッドに残る人影", "en": "A shadow left on an infirmary bed"}, "a9": {"ja": "人体模型", "en": "An anatomical model"}, "a10": {"ja": "和式トイレにうずくまる影", "en": "A figure crouching by a squat toilet"}, "a11": {"ja": "灯りのともる洞窟の牢", "en": "Lantern-lit cells in a cave"}, "a12": {"ja": "荒れた教室", "en": "A ruined classroom"}, "cv": {"ja": "CV：", "en": "CV: "}};
+  var BASE = { s0: 'Game Overview', s1: 'Story', s2: 'Character', s3: 'Movie', s4: 'Gallery', s5: 'News', s6: 'Info', c1: 'ワタヌキさん' };
+  var TYPE_KEYS = ['s0', 's1', 's2', 's3', 's4', 's5', 's6'];
+  var POOL = '縺繧繝譁蟄怜喧螟画鋤ｹｮｼｭ\uFFFD▓░▒#%&@ﾃﾞ';
+  var GALLERY = [['gal1.jpg','g1'],['gal2.jpg','g2'],['gal3.jpg','g3'],['gal4.jpg','g4'],['gal5.jpg','g5'],['gal6.jpg','g6'],['gal7.jpg','g7'],['gal8.jpg','g8'],['gal9.jpg','g9'],['gal10.jpg','g10']];
+  var CVS = ['村上 奈津実', 'まちだ 侑子', '喜多田 悠', '三木谷 奈々', '小林 英司', '岩井 遥'];
+  var STEAM = 'https://store.steampowered.com/app/4752680/%E6%80%96%E9%8C%B2/?l=';
+  var lang = 'ja';
+  var typed = {}, done = {};
+  var reduced = false;
+  try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  function $(id) { return document.getElementById(id); }
+  function t(k) { return DICT[k] ? DICT[k][lang] : ''; }
+  function gEls(k) { return document.querySelectorAll('[data-g="' + k + '"]'); }
+  function setG(k, text, glitch) {
+    gEls(k).forEach(function (el) { el.textContent = text; el.classList.toggle('glitch', !!glitch); });
+  }
+  function baseText(k) {
+    if (k === 'c1') return lang === 'en' ? 'Watanuki-san' : 'ワタヌキさん';
+    return BASE[k];
+  }
+  function currentText(k) {
+    if (TYPE_KEYS.indexOf(k) >= 0 && !done[k]) return BASE[k].slice(0, typed[k] || 0) + '_';
+    return baseText(k);
+  }
+
+  /* ---------- language ---------- */
+  function applyLang(l) {
+    lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      el.getAttribute('data-i18n-attr').split(';').forEach(function (p) {
+        var kv = p.split(':'); el.setAttribute(kv[0], t(kv[1]));
+      });
+    });
+    document.querySelectorAll('a[data-steam]').forEach(function (a) { a.href = STEAM + (l === 'en' ? 'english' : 'japanese'); });
+    $('langJa').classList.toggle('on', l === 'ja'); $('langJa').setAttribute('aria-pressed', l === 'ja');
+    $('langEn').classList.toggle('on', l === 'en'); $('langEn').setAttribute('aria-pressed', l === 'en');
+    setG('c1', currentText('c1'));
+    renderChar(); renderGallery(); updateSoundLabel(); updateNewsLabel();
+    if (lbIndex >= 0) renderLb();
+  }
+  $('langJa').addEventListener('click', function () { applyLang('ja'); });
+  $('langEn').addEventListener('click', function () { applyLang('en'); });
+
+  /* ---------- clock ---------- */
+  var sec = 793;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  setInterval(function () {
+    sec++;
+    $('clock').textContent = pad(Math.floor(sec / 3600)) + ':' + pad(Math.floor(sec / 60) % 60) + ':' + pad(sec % 60);
+  }, 1000);
+
+  /* ---------- typing + reveal ---------- */
+  function finishAll() {
+    TYPE_KEYS.forEach(function (k) { done[k] = true; setG(k, BASE[k]); });
+    document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+  }
+  function typeOut(k) {
+    if (!BASE[k] || done[k]) return;
+    typed[k] = 0;
+    var timer = setInterval(function () {
+      typed[k]++;
+      setG(k, currentText(k));
+      if (typed[k] >= BASE[k].length) {
+        clearInterval(timer);
+        setTimeout(function () { done[k] = true; setG(k, BASE[k]); }, 700);
+      }
+    }, 85);
+  }
+  if (reduced || !('IntersectionObserver' in window)) {
+    finishAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { io.unobserve(e.target); typeOut(e.target.getAttribute('data-type-key')); }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-type-key]').forEach(function (el) { io.observe(el); });
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { io2.unobserve(e.target); e.target.classList.add('in'); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(function (el) { io2.observe(el); });
+  }
+
+  /* ---------- glitch ---------- */
+  function scramble(s) {
+    var out = '';
+    for (var i = 0; i < s.length; i++) {
+      var ch = s.charAt(i);
+      out += (ch !== ' ' && Math.random() < 0.6) ? POOL.charAt(Math.floor(Math.random() * POOL.length)) : ch;
+    }
+    return out;
+  }
+  function fire() {
+    var keys = Object.keys(BASE).filter(function (k) { return TYPE_KEYS.indexOf(k) < 0 || done[k]; });
+    if (!keys.length) return;
+    var k = keys[Math.floor(Math.random() * keys.length)];
+    var src = baseText(k);
+    setG(k, scramble(src), true);
+    setTimeout(function () { setG(k, scramble(src), true); }, 90);
+    setTimeout(function () { setG(k, scramble(src), true); }, 180);
+    setTimeout(function () { setG(k, currentText(k), false); }, 270);
+  }
+  function loop() {
+    setTimeout(function () { if (!reduced) fire(); loop(); }, 1800 + Math.random() * 1800);
+  }
+  loop();
+
+  /* ---------- sound ---------- */
+  var soundOn = false;
+  function updateSoundLabel() {
+    $('sndbtn').setAttribute('aria-label', soundOn ? (lang === 'en' ? 'Mute sound' : '音声をオフにする') : (lang === 'en' ? 'Turn sound on' : '音声をオンにする'));
+  }
+  $('sndbtn').addEventListener('click', function () {
+    soundOn = !soundOn;
+    var v = document.querySelector('.hvid');
+    if (v) { v.muted = !soundOn; if (soundOn) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+    $('sndOn').hidden = !soundOn; $('sndOff').hidden = soundOn;
+    $('sndbtn').setAttribute('aria-pressed', soundOn);
+    updateSoundLabel();
+  });
+
+  /* ---------- news ---------- */
+  var newsOpen = false;
+  function updateNewsLabel() {
+    $('newsBtn').setAttribute('aria-label', newsOpen ? (lang === 'en' ? 'Show fewer news' : 'お知らせを閉じる') : (lang === 'en' ? 'Show more news' : 'お知らせをもっと見る'));
+  }
+  $('newsBtn').addEventListener('click', function () {
+    newsOpen = !newsOpen;
+    $('newsMore').hidden = !newsOpen;
+    $('newsBtn').classList.toggle('open', newsOpen);
+    $('newsBtn').setAttribute('aria-expanded', newsOpen);
+    updateNewsLabel();
+  });
+
+  /* ---------- characters ---------- */
+  var charSel = 0;
+  function renderChar() {
+    var wata = charSel === 0;
+    document.querySelectorAll('.cbtn').forEach(function (b) {
+      var i = +b.getAttribute('data-cidx');
+      b.classList.toggle('sel', i === charSel);
+      b.setAttribute('aria-pressed', i === charSel);
+      var nm = i === 0 ? (lang === 'en' ? 'Watanuki-san' : 'ワタヌキさん') : (lang === 'en' ? 'Unrevealed character' : '未公開のキャラクター');
+      b.setAttribute('aria-label', CVS[i] ? nm + '（CV：' + CVS[i] + '）' : nm);
+    });
+    $('charImg').hidden = !wata; $('charQ').hidden = wata;
+    $('charImg').alt = lang === 'en' ? 'Watanuki-san' : 'ワタヌキさん';
+    var name = $('charName');
+    if (wata) { name.setAttribute('data-g', 'c1'); name.textContent = baseText('c1'); }
+    else { name.removeAttribute('data-g'); name.textContent = '？？？'; name.classList.remove('glitch'); }
+    $('charCv').textContent = CVS[charSel] || '？';
+    $('charIntro').textContent = wata ? (lang === 'en' ? 'Just what is Watanuki-san?' : 'ワタヌキさんってなんなんだ？') : '？';
+  }
+  document.querySelectorAll('.cbtn').forEach(function (b) {
+    var pick = function () { charSel = +b.getAttribute('data-cidx'); renderChar(); };
+    b.addEventListener('click', pick); b.addEventListener('mouseenter', pick); b.addEventListener('focus', pick);
+  });
+
+  /* ---------- gallery + lightbox ---------- */
+  var gSel = 0, lbIndex = -1, N = GALLERY.length;
+  function renderGallery() {
+    var g = GALLERY[gSel];
+    $('gmainImg').src = 'assets/' + g[0];
+    $('gmainImg').alt = t(g[1]);
+    $('gmain').setAttribute('aria-label', t('enlarge') + t(g[1]));
+    document.querySelectorAll('.gsm').forEach(function (b) {
+      var i = +b.getAttribute('data-gidx');
+      b.classList.toggle('sel', i === gSel); b.setAttribute('aria-pressed', i === gSel);
+    });
+  }
+  function renderLb() {
+    var g = GALLERY[lbIndex];
+    $('lbImg').src = 'assets/' + g[0]; $('lbImg').alt = t(g[1]);
+    $('lb').setAttribute('aria-label', t(g[1]));
+    $('lbCount').textContent = (lbIndex + 1) + ' / ' + N;
+  }
+  function openLb(i) { lbIndex = i; renderLb(); $('lb').hidden = false; }
+  function closeLb() { lbIndex = -1; $('lb').hidden = true; $('gmain').focus(); }
+  function stepLb(d) { lbIndex = (lbIndex + d + N) % N; gSel = lbIndex; renderLb(); renderGallery(); }
+  document.querySelectorAll('.gsm').forEach(function (b) {
+    b.addEventListener('click', function () { gSel = +b.getAttribute('data-gidx'); renderGallery(); });
+  });
+  $('gPrev').addEventListener('click', function () { gSel = (gSel - 1 + N) % N; renderGallery(); });
+  $('gNext').addEventListener('click', function () { gSel = (gSel + 1) % N; renderGallery(); });
+  $('gmain').addEventListener('click', function () { openLb(gSel); });
+  document.querySelectorAll('[data-lb]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var a = b.getAttribute('data-lb');
+      if (a === 'close') closeLb(); else stepLb(a === 'next' ? 1 : -1);
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (lbIndex < 0) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowRight') stepLb(1);
+    else if (e.key === 'ArrowLeft') stepLb(-1);
+  });
+
+  TYPE_KEYS.forEach(function (k) { setG(k, currentText(k)); });
+})();
+</script>
+</body>
+</html>
